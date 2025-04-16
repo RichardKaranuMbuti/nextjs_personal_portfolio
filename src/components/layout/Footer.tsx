@@ -57,7 +57,7 @@ const Footer = () => {
             </h3>
             <div className="flex space-x-4 mb-4">
               <Link 
-                href={`https://github.com/${basics.github}`} 
+                href={basics.github}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-neutral-700 hover:text-primary-600 dark:text-neutral-300 dark:hover:text-primary-400"
@@ -66,7 +66,7 @@ const Footer = () => {
                 <GithubIcon size={20} />
               </Link>
               <Link 
-                href={`https://linkedin.com/in/${basics.linkedin}`} 
+                href={basics.linkedin}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-neutral-700 hover:text-primary-600 dark:text-neutral-300 dark:hover:text-primary-400"

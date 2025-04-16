@@ -264,7 +264,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   };
   
   return (
-    <section id="projects" className="py-10 sm:py-16 md:py-24 bg-white dark:bg-neutral-950">
+    <section id="projects" className="py-10 sm:py-16 md:py-24">
       <Container>
         <SectionHeading>Projects</SectionHeading>
         

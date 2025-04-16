@@ -1,6 +1,7 @@
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import About from '@/components/sections/home/About';
+import Contact from '@/components/sections/home/Contact';
 import Experience from '@/components/sections/home/Experience';
 import Hero from '@/components/sections/home/Hero';
 import Projects from '@/components/sections/home/Projects';
@@ -35,8 +36,8 @@ export default function Home() {
 
       <Projects projects={projectsData.projects} />
       
-      {/* Contact Section */}
-      {/* <Contact /> */}
+       {/* Contact Section - Uncommented and added */}
+      <Contact basics={resumeData.basics} />
 
       {/* Footer Section*/} 
       <Footer /> 

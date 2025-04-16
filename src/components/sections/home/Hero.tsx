@@ -3,7 +3,9 @@
 import Button from '@/components/ui/Button';
 import Container from '@/components/ui/Container';
 import { ArrowDownIcon, GithubIcon, LinkedinIcon, MailIcon } from 'lucide-react';
+import Image from 'next/image';
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-scroll';
 
 interface HeroProps {
   basics: {
@@ -65,17 +67,17 @@ const Hero = ({ basics }: HeroProps) => {
             </p>
 
             <div ref={highlightRef} className="flex flex-wrap gap-4 mb-12 opacity-0">
-              <Button href="#contact" size="lg">
-                Get in Touch
-              </Button>
-              <Button href="#experience" variant="outline" size="lg">
-                View My Work
-              </Button>
+              <Link to="contact" smooth={true} duration={500}>
+                <Button size="lg">Get in Touch</Button>
+              </Link>
+              <Link to="experience" smooth={true} duration={500}>
+                <Button variant="outline" size="lg">View My Work</Button>
+              </Link>
             </div>
 
             <div className="flex space-x-6">
               <a
-                href={`https://github.com/${basics.github}`}
+                href={basics.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-700 hover:text-primary-600 dark:text-neutral-300 dark:hover:text-primary-400 transition-colors"
@@ -84,7 +86,7 @@ const Hero = ({ basics }: HeroProps) => {
                 <GithubIcon size={24} />
               </a>
               <a
-                href={`https://linkedin.com/in/${basics.linkedin}`}
+                href={basics.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-neutral-700 hover:text-primary-600 dark:text-neutral-300 dark:hover:text-primary-400 transition-colors"
@@ -104,11 +106,35 @@ const Hero = ({ basics }: HeroProps) => {
 
           <div className="order-1 lg:order-2 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80">
+              {/* Outer gradient layers */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 animate-spin-slow blur-lg opacity-70"></div>
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-secondary-500/80 to-primary-500/80 transform rotate-45"></div>
+              
+              {/* 3D flip container */}
               <div className="absolute inset-[6px] rounded-full bg-white dark:bg-neutral-900 flex items-center justify-center">
-                <div className="p-2 rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 text-4xl text-white font-heading font-bold">
-                  RK
+                {/* This is the flip card wrapper */}
+                <div className="card-3d-wrapper w-[90%] h-[90%] rounded-full">
+                  {/* This is the actual flipping element */}
+                  <div className="card-3d-element w-full h-full relative">
+                    {/* Front face - Initials */}
+                    <div className="card-front absolute w-full h-full rounded-full flex items-center justify-center">
+                      <div className="w-full h-full rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center text-4xl font-bold text-white font-heading">
+                        RK
+                      </div>
+                    </div>
+                    
+                    {/* Back face - Image */}
+                    <div className="card-back absolute w-full h-full rounded-full flex items-center justify-center overflow-hidden">
+                      <Image 
+                        src="/images/karanu.png" 
+                        alt="Profile picture" 
+                        width={300} 
+                        height={300}
+                        className="w-full h-full object-cover rounded-full"
+                        priority 
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

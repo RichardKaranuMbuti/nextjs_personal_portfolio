@@ -10,12 +10,11 @@ export default {
   ],
   theme: {
     extend: {
-      
       fontFamily: {
         sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
         heading: ['var(--font-poppins)', ...defaultTheme.fontFamily.sans],
         mono: ['var(--font-jetbrains-mono)', ...defaultTheme.fontFamily.mono],
-      }, // Added closing brace here
+      },
       colors: {
         // Primary palette
         primary: {
@@ -65,12 +64,6 @@ export default {
         warning: '#f59e0b',
         info: '#3b82f6',
       },
-      // Remove this duplicate fontFamily section
-      // fontFamily: {
-      //   sans: ['var(--font-inter)', ...require('tailwindcss/defaultTheme').fontFamily.sans],
-      //   heading: ['var(--font-poppins)', ...require('tailwindcss/defaultTheme').fontFamily.sans],
-      //   mono: ['var(--font-jetbrains-mono)', ...require('tailwindcss/defaultTheme').fontFamily.mono],
-      // },
       fontSize: {
         'display': ['4.5rem', { lineHeight: '1' }],
         'h1': ['3rem', { lineHeight: '1.2' }],
@@ -93,10 +86,12 @@ export default {
         'button': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out forwards', // Added 'forwards' here
-        'slide-up': 'slideUp 0.5s ease-out forwards',  // Added 'forwards' here
+        'fade-in': 'fadeIn 0.5s ease-in-out forwards',
+        'slide-up': 'slideUp 0.5s ease-out forwards',
+        'spin-slow': 'spin 8s linear infinite',
+        'flip': 'flip 8s linear infinite',
+        
       },
-   
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
@@ -105,6 +100,11 @@ export default {
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        flip: {
+          '0%, 45%': { transform: 'rotateY(0deg)' },
+          '50%, 95%': { transform: 'rotateY(180deg)' },
+          '100%': { transform: 'rotateY(360deg)' },
         },
       },
     },

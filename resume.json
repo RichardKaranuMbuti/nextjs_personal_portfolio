@@ -4,8 +4,8 @@
       "location": "Nairobi, Kenya",
       "phone": "+254701291911",
       "email": "officialforrichardk@gmail.com",
-      "linkedin": "LinkedIn",
-      "github": "Github",
+      "linkedin": "https://www.linkedin.com/in/richard-karanu/",
+      "github": "https://github.com/RichardKaranuMbuti",
       "title": "Full Stack Software Engineer",
       "summary": "Experienced Full Stack Software Engineer with 4+ years in Java, Typescript and Python ecosystems, specializing in enterprise frameworks like React, Spring Boot, Node.js and Django. Possess strong skills in system architecture and containerization that help technology companies deliver scalable, production-ready solutions. Demonstrated expertise in modernizing applications through Docker while actively expanding knowledge in mobile development and Kubernetes. Passionate about leveraging artificial intelligence and contributing to open-source projects that drive innovation."
     },
@@ -187,6 +187,14 @@
       "Soccer",
       "Cycling",
       "Swimming"
-    ]
+    ],
+    "open_source": [
+    {
+      "name": "Miksi AI SDK",
+      "description": "Created and maintain a Python library that enables natural language business intelligence. Published on PyPI.",
+      "link": "https://pypi.org/project/miksi-ai-sdk/",
+      "tech_stack": ["Python", "OpenAI API", "matplotlib", "pandas"]
+    }
+  ]
   }
   
