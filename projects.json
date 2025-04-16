@@ -1,0 +1,23 @@
+{
+    "projects": [
+      {
+        "name": "Solaris Track and Trace",
+        "time": "Jun 2024 - Mar 2025",
+        "short_description": "An innovative track-and-trace system managing the lifecycle of solar panels, from distribution to recycling.",
+        "long_description": "Solaris is an innovative track-and-trace application designed to optimize the distribution, installation, monitoring, and recycling of solar panels. This comprehensive system offers end-to-end visibility across the entire solar panel lifecycle, enhancing efficiency and sustainability in the renewable energy sector.\n\nKey Features:\n • Real-time Shipment Tracking: Monitor transit times from manufacturers to installers, improving supply chain efficiency. \n • Installation Performance Metrics: Track installation durations to identify bottlenecks and optimize processes. \n • Geospatial Visualization: Map installed solar panels geographically, providing insights into distribution patterns and market penetration. \n • Panel Health Monitoring: Assess and visualize the condition of installed panels to facilitate proactive maintenance and recycling planning. \n • Recycling Process Management: Track the collection of end-of-life panels and monitor recycling timelines, promoting circular economy practices.\n\nTechnical Implementation:\n • Web Application: Developed a responsive web interface for comprehensive data analysis and management. \n • Cross-Platform Mobile Application: Created native apps for Android and iOS, ensuring on-the-go access for field technicians and managers.\n\nImpact: Solaris significantly improves operational efficiency in solar panel distribution, reduces installation times, extends panel lifespan through proactive maintenance, and enhances recycling efforts. This project contributes to the broader goals of sustainable energy adoption and responsible resource management in the solar industry.",
+        "tech_stack": ["React.js", "Tailwind CSS", "Django", "Django REST Framework", "PostgreSQL", "React Native", "Mapbox", "Docker"],
+        "github_link": "https://github.com/RichardKaranuMbuti/solaris_backend",
+        "video_link": "https://github.com/RichardKaranuMbuti/solaris_backend/blob/main/README.md#video"
+      },
+      {
+        "name": "MiksiAI - AI Business Intelligence SDK",
+        "time": "Jun 2023 - Apr 2024",
+        "short_description": "An AI-powered Python SDK enabling natural language business intelligence across multiple databases.",
+        "long_description": "MiksiAI is an advanced Python library that transforms how businesses interact with their data. This AI-powered SDK enables users to perform sophisticated business intelligence tasks using natural language, bridging the gap between complex data analysis and everyday communication.\n\nKey Features:\n • Natural Language Interface: Users can query their data using plain English, eliminating the need for SQL or Python expertise. \n • AI-Driven Analysis: Employs advanced AI to interpret queries, execute appropriate database operations, and generate insights.\n • Automated Visualization: Creates relevant charts and graphs based on user queries without manual coding. \n • Privacy-Centric Design: As an SDK, it allows companies to keep their data on-premises, ensuring data privacy and security. \n • Multi-Database Compatibility: Supports popular SQL engines including MySQL, PostgreSQL, and MS SQL Server. \n • Customizable Outputs: Offers flexible response formats, including the ability to specify output language.\n\nTechnical Implementation:\n • Python-based SDK for seamless integration into existing systems \n • Utilizes isolated virtual environments for secure execution \n • Supports custom installations of visualization libraries (e.g., matplotlib, plotly)\n\nImpact: MiksiAI democratizes data analysis within organizations, allowing non-technical staff to gain valuable insights from complex datasets. It significantly reduces the learning curve for BI tools, accelerates decision-making processes, and maintains data security by operating within the company's own infrastructure.",
+        "tech_stack": ["Python", "LangChain", "OpenAI", "FastAPI", "MySQL", "PostgreSQL", "MS SQL Server", "matplotlib", "plotly", "Docker", "Azure", "Pandas"],
+        "github_link": "https://github.com/RichardKaranuMbuti/miksi-ai-sdk",
+        "video_link": ""
+      }
+    ]
+  }
+  

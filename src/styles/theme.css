@@ -1,0 +1,82 @@
+:root {
+    /* Base colors */
+    --color-primary-50: #f0f9ff;
+    --color-primary-100: #e0f2fe;
+    --color-primary-200: #bae6fd;
+    --color-primary-300: #7dd3fc;
+    --color-primary-400: #38bdf8;
+    --color-primary-500: #0ea5e9;
+    --color-primary-600: #0284c7;
+    --color-primary-700: #0369a1;
+    --color-primary-800: #075985;
+    --color-primary-900: #0c4a6e;
+    --color-primary-950: #082f49;
+    
+    --color-secondary-50: #f5f3ff;
+    --color-secondary-100: #ede9fe;
+    --color-secondary-200: #ddd6fe;
+    --color-secondary-300: #c4b5fd;
+    --color-secondary-400: #a78bfa;
+    --color-secondary-500: #8b5cf6;
+    --color-secondary-600: #7c3aed;
+    --color-secondary-700: #6d28d9;
+    --color-secondary-800: #5b21b6;
+    --color-secondary-900: #4c1d95;
+    --color-secondary-950: #2e1065;
+    
+    /* Background colors */
+    --bg-primary: var(--color-neutral-50);
+    --bg-secondary: var(--color-neutral-100);
+    --bg-tertiary: var(--color-neutral-200);
+    --bg-dark: var(--color-neutral-900);
+    
+    /* Text colors */
+    --text-primary: var(--color-neutral-900);
+    --text-secondary: var(--color-neutral-700);
+    --text-tertiary: var(--color-neutral-500);
+    --text-light: var(--color-neutral-50);
+    
+    /* Accent colors */
+    --accent-primary: var(--color-primary-500);
+    --accent-secondary: var(--color-secondary-500);
+    
+    /* Layout properties */
+    --container-max-width: 1200px;
+    --container-padding: 2rem;
+    --section-spacing: 6rem;
+    
+    /* Border radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    
+    /* Transition speeds */
+    --transition-fast: 0.2s;
+    --transition-medium: 0.3s;
+    --transition-slow: 0.5s;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    
+    /* Z-index levels */
+    --z-nav: 100;
+    --z-dropdown: 200;
+    --z-modal: 300;
+    --z-toast: 400;
+  }
+  
+  /* Dark mode variables */
+  .dark {
+    --bg-primary: var(--color-neutral-900);
+    --bg-secondary: var(--color-neutral-800);
+    --bg-tertiary: var(--color-neutral-700);
+    --bg-dark: var(--color-neutral-950);
+    
+    --text-primary: var(--color-neutral-50);
+    --text-secondary: var(--color-neutral-200);
+    --text-tertiary: var(--color-neutral-400);
+    --text-light: var(--color-neutral-900);
+  }
