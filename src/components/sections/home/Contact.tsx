@@ -43,7 +43,7 @@ const Contact = ({ basics }: ContactProps) => {
       await new Promise(resolve => setTimeout(resolve, 1500));
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
+    } catch {  
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -223,7 +223,7 @@ const Contact = ({ basics }: ContactProps) => {
                 </Button>
                 
                 {submitStatus === 'success' && (
-                  <p className="mt-3 text-success text-sm">Your Message is with me! I'll get back to you soon.</p>
+                  <p className="mt-3 text-success text-sm">Your Message is with me! I&apos;ll get back to you soon.</p>
                 )}
                 
                 {submitStatus === 'error' && (

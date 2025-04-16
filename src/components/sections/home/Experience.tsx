@@ -20,7 +20,10 @@ const Experience = ({ experience }: { experience: ExperienceType[] }) => {
       newState[activeTab] = true;
       return newState;
     });
-
+  
+    // Capture the current refs at the time this effect runs
+    const currentRefs = experienceRefs.current;
+  
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -28,7 +31,7 @@ const Experience = ({ experience }: { experience: ExperienceType[] }) => {
             entry.target.classList.add('animate-fade-in');
             
             // Find the index of the intersecting element
-            const index = experienceRefs.current.findIndex(ref => ref === entry.target);
+            const index = currentRefs.findIndex(ref => ref === entry.target);
             if (index !== -1) {
               setViewedItems(prev => {
                 const newState = [...prev];
@@ -41,13 +44,14 @@ const Experience = ({ experience }: { experience: ExperienceType[] }) => {
       },
       { threshold: 0.1 }
     );
-
-    experienceRefs.current.forEach((ref) => {
+  
+    currentRefs.forEach((ref) => {
       if (ref) observer.observe(ref);
     });
-
+  
     return () => {
-      experienceRefs.current.forEach((ref) => {
+      // Use the captured refs in the cleanup function
+      currentRefs.forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
     };

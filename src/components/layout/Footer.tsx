@@ -3,8 +3,8 @@ import { GithubIcon, LinkedinIcon, MailIcon, PhoneIcon } from 'lucide-react';
 import Link from 'next/link';
 import Container from '../ui/Container';
 
-const Footer = () => {
-  const { basics } = getResumeData();
+const  Footer = async () => {
+  const { basics } = await getResumeData();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -48,6 +48,17 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <a
+                  href="https://github.com/RichardKaranuMbuti/nextjs_personal_portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-600 hover:text-primary-600 dark:text-neutral-300 dark:hover:text-primary-400"
+                >
+                  Use my template
+                </a>
+              </li>
+
             </ul>
           </div>
 

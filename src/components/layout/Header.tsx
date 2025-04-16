@@ -38,7 +38,7 @@ const Header = ({ basics }: HeaderProps) => {
     { name: 'Skills', href: '/#skills' },
     { name: 'Projects', href: '/#projects' },
     { name: 'Contact', href: '/#contact' },
-    { name: 'Blog', href: '/blog' },
+    // { name: 'Blog', href: '/blog' },
     { name: 'Open-source', href: 'https://github.com/RichardKaranuMbuti' },
     { name: 'Resume', href: '/resume-march-2025.pdf', download: true},
   ];

@@ -9,9 +9,9 @@ import Skills from '@/components/sections/home/Skills';
 import { getResumeData } from '@/utils/resumeData';
 import projectsData from '../../projects.json';
 
-export default function Home() {
+export default async function Home() {
   // Server-side data fetching using getResumeData
-  const resumeData = getResumeData();
+  const resumeData = await getResumeData();
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">

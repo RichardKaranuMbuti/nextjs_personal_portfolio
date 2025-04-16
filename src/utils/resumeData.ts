@@ -53,23 +53,23 @@ export type ResumeData = {
 };
 
 // This function will only be called on the server side
-export const getServerResumeData = cache((): ResumeData => {
+export const getServerResumeData = cache(async (): Promise<ResumeData> => {
   // We need to use dynamic imports for fs and path to avoid client-side errors
   if (typeof window === 'undefined') {
-    const fs = require('fs');
-    const path = require('path');
+    // Replace require() with dynamic imports
+    const fs = await import('fs');
+    const path = await import('path');
     const filePath = path.join(process.cwd(), 'resume.json');
     const fileContents = fs.readFileSync(filePath, 'utf8');
     return JSON.parse(fileContents) as ResumeData;
   }
   return {} as ResumeData; // This should never be reached in practice
 });
-
 // This is the main function that will be used by both server and client components
-export function getResumeData(): ResumeData {
+export async function getResumeData(): Promise<ResumeData> {
   // If we're running on the server, fetch the data directly
   if (typeof window === 'undefined') {
-    return getServerResumeData();
+    return await getServerResumeData();
   }
   // If we're on the client, the data should already be available via props
   // This is a fallback that should ideally not be reached

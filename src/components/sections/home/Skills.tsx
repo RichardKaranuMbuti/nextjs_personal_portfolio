@@ -94,14 +94,18 @@ const Skills = ({
       },
       { threshold: 0.1 }
     );
-
-    if (skillsRef.current) {
-      observer.observe(skillsRef.current);
+  
+    // Capture the current ref value
+    const currentSkillsRef = skillsRef.current;
+    
+    if (currentSkillsRef) {
+      observer.observe(currentSkillsRef);
     }
-
+  
     return () => {
-      if (skillsRef.current) {
-        observer.unobserve(skillsRef.current);
+      // Use the captured ref value in cleanup
+      if (currentSkillsRef) {
+        observer.unobserve(currentSkillsRef);
       }
     };
   }, []);

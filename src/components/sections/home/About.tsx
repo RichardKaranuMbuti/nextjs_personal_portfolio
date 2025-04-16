@@ -79,7 +79,7 @@ const About = ({ resumeData }: AboutProps) => {
               with React to backend systems with Spring Boot, Django, and Node.js.
             </p>
             <p className="text-neutral-700 dark:text-neutral-300 text-lg leading-relaxed text-pretty">  
-              I'm passionate about leveraging artificial intelligence to solve complex problems and actively contribute 
+            I&apos;m passionate about leveraging artificial intelligence to solve complex problems and actively contribute 
               to open-source projects that drive innovation in the tech community.
             </p>
           </div>

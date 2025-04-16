@@ -30,14 +30,18 @@ const Hero = ({ basics }: HeroProps) => {
       },
       { threshold: 0.1 }
     );
-
-    if (highlightRef.current) {
-      observer.observe(highlightRef.current);
+  
+    // Capture the current ref value
+    const currentHighlightRef = highlightRef.current;
+    
+    if (currentHighlightRef) {
+      observer.observe(currentHighlightRef);
     }
-
+  
     return () => {
-      if (highlightRef.current) {
-        observer.unobserve(highlightRef.current);
+      // Use the captured ref value in cleanup
+      if (currentHighlightRef) {
+        observer.unobserve(currentHighlightRef);
       }
     };
   }, []);
@@ -54,7 +58,7 @@ const Hero = ({ basics }: HeroProps) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <p className="text-primary-600 dark:text-primary-400 font-medium mb-2 animate-fade-in">
-              Hello, I'm
+              Hello, I&apos;m
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-display font-bold mb-4 font-heading text-balance">
               {basics.name}
