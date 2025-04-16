@@ -30,22 +30,35 @@ const About = ({ resumeData }: AboutProps) => {
   const aboutRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Make sure this effect only runs on the client side
+    if (typeof window === 'undefined') return;
+    
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in');
+            // Type casting to HTMLElement to access style properties
+            const element = entry.target as HTMLElement;
+            element.classList.add('animate-fade-in');
+            element.style.opacity = '1';
+            element.style.animationFillMode = 'forwards';
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: '20px' }
     );
-
+  
     const items = document.querySelectorAll('.about-item');
-    items.forEach((item) => observer.observe(item));
-
+    if (items.length > 0) {
+      items.forEach((item) => observer.observe(item));
+    } else {
+      console.warn('No .about-item elements found');
+    }
+  
     return () => {
-      items.forEach((item) => observer.unobserve(item));
+      if (items.length > 0) {
+        items.forEach((item) => observer.unobserve(item));
+      }
     };
   }, []);
 
@@ -63,7 +76,7 @@ const About = ({ resumeData }: AboutProps) => {
             <p className="text-neutral-700 dark:text-neutral-300 text-lg leading-relaxed text-pretty">
               I specialize in building scalable, production-ready solutions that help companies modernize their 
               applications and improve their technical infrastructure. My expertise spans from frontend development 
-              with React to backend systems with Spring Boot, Django, and Node,js.
+              with React to backend systems with Spring Boot, Django, and Node.js.
             </p>
             <p className="text-neutral-700 dark:text-neutral-300 text-lg leading-relaxed text-pretty">  
               I'm passionate about leveraging artificial intelligence to solve complex problems and actively contribute 

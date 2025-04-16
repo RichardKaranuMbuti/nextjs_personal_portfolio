@@ -10,6 +10,7 @@ export default {
   ],
   theme: {
     extend: {
+      
       fontFamily: {
         sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
         heading: ['var(--font-poppins)', ...defaultTheme.fontFamily.sans],
@@ -92,9 +93,10 @@ export default {
         'button': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.5s ease-out',
+        'fade-in': 'fadeIn 0.5s ease-in-out forwards', // Added 'forwards' here
+        'slide-up': 'slideUp 0.5s ease-out forwards',  // Added 'forwards' here
       },
+   
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
