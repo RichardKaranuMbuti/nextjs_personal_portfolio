@@ -14,10 +14,13 @@
         "Python",
         "Java",
         "Typescript",
+        "Node.js",
         "SQL",
         "Spring Boot",
         "Django",
         "React.js",
+        "Microservices",
+        "Rest APIs",
         "Docker",
         "AWS",
         "Azure",
@@ -25,9 +28,7 @@
         "Linux"
       ],
       "familiarWith": [
-        "Node.js",
-        "Microservices",
-        "Rest APIs",
+      
         "Kafka",
         "Machine Learning & AI",
         "Kubernetes",
@@ -40,7 +41,8 @@
       "currentlyLearning": [
         "Go",
         "React-Native",
-        "Agentic Computing"
+        "Agentic Computing",
+        "AI agents"
       ]
     },
     "experience": [
@@ -160,15 +162,70 @@
     },
     "certifications": [
       {
-        "name": "API Security",
-        "issuer": "API Sec University",
+        "name": "API Security Fundamentals",
+        "issuer": "APIsec University",
         "date": "Nov 2024"
       },
       {
-        "name": "Docker",
+        "name": "Learning Docker",
         "issuer": "LinkedIn Learning",
-        "date": "Nov 2024"
+        "date": "Nov 2024",
+        "credential_id": "49384350a2a31c8208c252647bab57ee777cfbc922e7c22b2af16c158548732c",
+        "skills": ["Docker", "Docker Compose"]
+      },
+      {
+        "name": "Spring Boot Microservices",
+        "issuer": "LinkedIn Learning",
+        "date": "Nov 2024",
+        "credential_id": "5cc4e5c87204ff8506623686a98f942ca0e79e6c85d7f4e385b3a8f2f17b4433",
+        "skills": [
+          "Java", "JPA", "Docker Compose", "JUnit",
+          "Spring Boot MicroServices", "Mockito"
+        ]
+      },
+      {
+        "name": "Kubernetes: GitOps with ArgoCD",
+        "issuer": "LinkedIn Learning",
+        "date": "Mar 2025",
+        "skills": ["Argo", "GitOps"]
+      },
+      {
+        "name": "Learning Jenkins",
+        "issuer": "LinkedIn Learning",
+        "date": "Mar 2025",
+        "skills": ["Jenkins"]
+      },
+      {
+        "name": "Learning Kubernetes",
+        "issuer": "LinkedIn Learning",
+        "date": "Mar 2025",
+        "skills": ["Kubernetes"]
+      },
+      {
+        "name": "Learning OpenShift",
+        "issuer": "LinkedIn Learning",
+        "date": "Mar 2025",
+        "skills": ["OpenShift", "Kubernetes"]
+      },
+      {
+        "name": "Learning Terraform",
+        "issuer": "LinkedIn Learning",
+        "date": "Mar 2025",
+        "skills": ["Terraform"]
+      },
+      {
+        "name": "Next.js: Creating and Hosting a Full-Stack Site",
+        "issuer": "LinkedIn Learning",
+        "date": "Mar 2025",
+        "skills": ["Next.js"]
+      },
+      {
+        "name": "Prometheus Essential Training",
+        "issuer": "LinkedIn Learning",
+        "date": "Mar 2025",
+        "skills": ["Event Monitoring", "Prometheus.io", "System Monitoring"]
       }
+
     ],
     "languages": [
       {
