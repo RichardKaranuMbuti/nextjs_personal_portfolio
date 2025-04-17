@@ -162,12 +162,12 @@
     },
     "certifications": [
       {
-        "name": "API Security Fundamentals",
+        "name": "API Security ",
         "issuer": "APIsec University",
         "date": "Nov 2024"
       },
       {
-        "name": "Learning Docker",
+        "name": "Docker",
         "issuer": "LinkedIn Learning",
         "date": "Nov 2024",
         "credential_id": "49384350a2a31c8208c252647bab57ee777cfbc922e7c22b2af16c158548732c",
@@ -190,31 +190,31 @@
         "skills": ["Argo", "GitOps"]
       },
       {
-        "name": "Learning Jenkins",
+        "name": "Jenkins",
         "issuer": "LinkedIn Learning",
         "date": "Mar 2025",
         "skills": ["Jenkins"]
       },
       {
-        "name": "Learning Kubernetes",
+        "name": "Kubernetes",
         "issuer": "LinkedIn Learning",
         "date": "Mar 2025",
         "skills": ["Kubernetes"]
       },
       {
-        "name": "Learning OpenShift",
+        "name": "RedHat OpenShift",
         "issuer": "LinkedIn Learning",
         "date": "Mar 2025",
         "skills": ["OpenShift", "Kubernetes"]
       },
       {
-        "name": "Learning Terraform",
+        "name": "Terraform",
         "issuer": "LinkedIn Learning",
         "date": "Mar 2025",
         "skills": ["Terraform"]
       },
       {
-        "name": "Next.js: Creating and Hosting a Full-Stack Site",
+        "name": "Next.js",
         "issuer": "LinkedIn Learning",
         "date": "Mar 2025",
         "skills": ["Next.js"]
